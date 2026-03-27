@@ -71,12 +71,15 @@ def test_multiply_errors(a, b, error_type):
     (3, 2, 1.5),
 ])
 
+
 def test_divide_correct(a, b, expected):
     assert divide(a, b) == expected
+
 
 def test_divide_str():
     with pytest.raises(TypeError):
         divide('-10', 2)
+
 
 def test_divide_zero():
     with pytest.raises(ZeroDivisionError):
